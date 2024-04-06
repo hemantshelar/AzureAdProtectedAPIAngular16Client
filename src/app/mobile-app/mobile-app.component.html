@@ -1,0 +1,27 @@
+  <a mat-button (click)="grabToken()">Grab Access Token!</a>
+
+<div>
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>JWT Token</mat-label>
+    <textarea matInput placeholder="access token"[value]="accessToken"></textarea>
+  </mat-form-field><br>
+  <button [cdkCopyToClipboard]="accessToken">Copy JWT!</button>
+  <br>
+  <hr>
+
+
+    <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <textarea [value]="adminTestOperationResponse" matInput placeholder="Amin Test Operation Output."></textarea>
+  </mat-form-field><br>
+  <a mat-button (click)="invokeAdminTestOperation()">Admin Test Operation</a>
+  <br>
+  <hr>
+
+    <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <textarea [value]="nonAdminTestOperationResponse" matInput placeholder="Non Admin Test Operation reslut!"></textarea>
+  </mat-form-field><br>
+  <a mat-button (click)="invokeNonAdminTestOperation()">Non Admin TEst Operation </a>
+</div>
